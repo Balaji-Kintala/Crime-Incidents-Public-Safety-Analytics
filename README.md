@@ -1,4 +1,6 @@
 # Crime Incidents Dashboard
+## Dashboard Preview
+![Crime Incidents Dashboard](dashboard_preview.png)
 
 ## Project Overview
 
