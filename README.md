@@ -1,126 +1,133 @@
-# Crime Incidents Dashboard
-## Dashboard Preview
-![Crime Incidents Dashboard](dashboard_preview.png)
+# Crime Incidents & Public Safety Analytics
 
 ## Project Overview
 
-This project is an **Excel-based Crime Incidents Dashboard** designed to analyze crime incidents and present key trends, patterns, and business insights through interactive visualizations.
+**Crime Incidents & Public Safety Analytics** is an Excel-based data analytics project focused on analyzing crime incidents, arrests, property loss, severity levels, and reporting patterns. The project uses data cleaning, PivotTables, PivotCharts, and interactive slicers to transform raw incident records into an interactive dashboard.
 
-The project includes raw data, cleaned data, PivotTables, charts, and an interactive dashboard.
+The dashboard helps users explore crime patterns across different years, crime types, severity levels, and states.
 
-## Project Workflow
+## Dashboard Preview
 
-The analysis was completed through the following stages:
+![Crime Incidents Dashboard](DashBoard.png)
 
-1. Raw Data
-2. Data Cleaning
-3. PivotTable Creation
-4. Dashboard Development
-5. Business Insights
+## Tools & Technologies
 
-## Data Preparation
+- Microsoft Excel
+- Data Cleaning and Data Transformation
+- Excel Tables and Formulas
+- PivotTables and PivotCharts
+- Interactive Slicers
+- Dashboard Design and Data Visualization
 
-The raw crime incident data was cleaned and transformed before creating the analysis.
+## Workbook Structure
 
-The final Excel workbook contains both the **raw data** and **cleaned data** sheets.
+The Excel workbook contains four sheets:
 
-The dashboard analysis also accounts for missing incident date/time records when performing time-based analysis. The summary document notes that **329 records with missing incident date/time are excluded from time-based PivotTables**.
+### 1. Raw Data — `crime_incidents_messy_rawdata`
 
-## PivotTables and Analysis
+Contains the original crime incident records, including crime types, locations, incident dates and times, suspect and victim details, weapons, severity, case status, arrests, property loss, and online reporting information.
 
-Multiple PivotTables were created to analyze crime incidents by:
+### 2. Cleaned Data — `crime_incidents_messy_cleaned`
 
-* Crime Type
-* Severity
-* Month
-* Day of Week
-* Hour
-* Weapon Used
-* Resolution
-* State
-* District
-* Case Status
-* Year
-* Property Loss
+Contains the cleaned and standardized incident data, with **5,050 incident records** and 30 columns.
 
-These PivotTables were used to create the dashboard visualizations.
+Data preparation includes:
 
-## Dashboard
+- Standardizing crime type names and categorical values.
+- Cleaning and organizing location information.
+- Standardizing suspect and victim attributes.
+- Handling missing and invalid values.
+- Cleaning numerical fields such as suspect age, victim age, arrests, and property loss.
+- Preparing date and time fields for time-based analysis.
+- Creating Year, Month, Day, Day of Week, Hour, Minute, and Second fields.
 
-The dashboard provides an interactive view of crime incidents using charts, KPI cards, and slicers.
+### 3. Pivot Tables — `pivot_table`
 
-### Key KPIs
+Contains summary tables used to analyze incident counts, arrests, property loss, and other crime characteristics.
 
-* **Total Incidents:** 5,050
-* **Total Arrests:** 11,217
-* **Total Property Loss:** $107.29 million
-* **Online Reports:** 2,263
-* **Highest Incident Year:** 2024 with 706 incidents
+The analysis covers:
 
-The dashboard includes slicers for:
+- Crime type
+- Severity
+- Month
+- Hour
+- Day of week
+- Weapon used
+- Resolution
+- State
+- District
+- Case status
+- Online reporting
 
-* Year
-* Month
-* Crime Type
-* District
-* Severity
-* Case Status
+### 4. Dashboard — `Dashboard`
 
-These slicers allow the analysis to be filtered interactively.
+An interactive dashboard that combines KPI cards, charts, and slicers to present key information in a single view.
+
+## Key Performance Indicators (KPIs)
+
+The dashboard includes four key metrics:
+
+- **Total Incidents:** 5,050
+- **Total Arrests:** 11,217
+- **Total Property Loss:** $107.29 million
+- **Online Reports:** 2,263
+
+These values represent the overall totals displayed by the workbook. Interactive filters may change the values shown in the dashboard.
 
 ## Dashboard Visualizations
 
-The dashboard contains visualizations for:
+The dashboard includes six chart types:
 
-* Cases by Resolution
-* Incidents by Severity
-* Incidents by Month
-* Incidents by Crime Type
-* Property Loss by Crime Type
-* Incidents by Day of Week
-* Incidents by District
-* Incidents by Hour
-* Incidents by Year
-* Incidents by Weapon Used
-* Cases by Status
-* Incidents by State
+1. **Incidents by Crime Type — Horizontal Bar Chart:** Compares incident counts across crime categories.
+2. **Property Loss by Crime Type — Column Chart:** Compares reported property loss across crime categories.
+3. **Incidents by Severity — Doughnut Chart:** Shows the distribution of incidents across severity levels.
+4. **Incidents by Month — Line Chart:** Displays monthly incident-count patterns.
+5. **Incidents by State — Radar Chart:** Compares incident counts across the states represented in the analysis.
+6. **Arrests by Crime Type — Area Chart:** Visualizes arrest counts across crime categories.
 
-## Five Key Business Insights
+## Interactive Features
 
-### 1. Crime Trend Increased Over the Years
+The dashboard includes slicers for:
 
-Crime incidents increased from **642 incidents in 2018** to a peak of **706 incidents in 2024**, indicating a higher incident volume in the latest year.
+- Year
+- Crime Type
+- Severity
+- State
 
-### 2. Medium and Critical Incidents Dominate Severity
+Users can select one or more filter values to explore the data and examine how the dashboard changes according to their selections.
 
-Medium severity accounts for **26.71%** and Critical severity accounts for **26.48%** of incidents.
+## Project Objectives
 
-Together, they represent **over 53%** of the recorded incidents.
+- Clean and standardize raw crime incident data.
+- Summarize incident counts, arrests, and property loss.
+- Analyze crime patterns by category, severity, location, and time.
+- Build an interactive Excel dashboard for data exploration.
+- Present key metrics and visual comparisons in a single dashboard.
 
-### 3. North and South Have the Highest Incident Counts
+## Key Outcomes
 
-The **North district** recorded **696 incidents**, followed by **South with 668 incidents**, making them the two districts with the highest incident volumes.
+- Prepared a structured dataset containing 5,050 cleaned incident records.
+- Created PivotTables to summarize multiple crime-related dimensions.
+- Built a dashboard with four KPI cards and six different chart types.
+- Added interactive slicers to support filtered analysis.
+- Organized the workbook into raw data, cleaned data, analysis, and dashboard sheets.
 
-### 4. Firearms Are the Most Frequently Recorded Weapon
+## How to Use
 
-Firearm incidents total **1,539**, the highest among the weapon categories, followed by **Unarmed with 1,003** and **N/A with 905**.
+1. Download the Excel workbook from this repository.
+2. Open it in Microsoft Excel.
+3. Navigate to the **Dashboard** sheet.
+4. Use the Year, Crime Type, Severity, and State slicers to filter the analysis.
+5. Explore the charts to compare crime incidents, property loss, and arrests.
+6. Navigate to the other sheets to inspect the cleaned dataset and PivotTables.
 
-### 5. Fraud Has the Highest Financial Impact
+## Repository Contents
 
-Fraud generated approximately **$9.19 million** in property loss, the highest among the crime types, followed by **DUI with $7.72 million** and **Drug Offense with $7.58 million**.
+- `DashBoard.png` — Dashboard preview image.
+- `Kintala Balaji - 8465019018.xlsx` — Excel workbook containing the raw data, cleaned data, PivotTables, and dashboard.
+- `README.md` — Project documentation.
 
-## Tools Used
+## Conclusion
 
-* Microsoft Excel
-* PivotTables
-* Excel Charts
-* Slicers
-* Data Cleaning
-* Data Analysis
-* Data Visualization
+This project demonstrates practical Excel data analytics skills, including data cleaning, aggregation, PivotTables, chart creation, and interactive dashboard development. It provides a structured way to explore crime incident patterns and communicate findings through visual analysis.
 
-## Project Files
-
-The main project file is the Excel workbook containing the raw data, cleaned data, PivotTables, and dashboard.
-
-**Excel Dashboard:** `Kintala Balaji - 8465019018.xlsx`
